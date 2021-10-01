@@ -1,0 +1,24 @@
+const records = {
+    courses:{
+        ...
+    },
+    students: {
+        ...
+    }
+}
+
+// localhost:3000/api/courses
+app.get('/api/:record', () => {
+    res.send(records[req.params.records])
+})
+
+// localhost:3000/api/courses
+app.get('/api/courses', () => {
+    res.send(records.courses)
+})
+
+// localhost:3000/api/search?q=...
+app.get('/api/search', () => {
+    req.query.q
+    res.send(records.courses)
+})
